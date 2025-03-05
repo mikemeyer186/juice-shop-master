@@ -15,6 +15,6 @@ This repository is used for submitting the project “Juice Shop Meister” as p
 
 | Challenge                                              | Category                            | Difficulty   |
 | ------------------------------------------------------ | ------------------------------------| ------------ |
-| [Manipulate Basket](.challenges/manipulate_basket.md)  | Broken Access Control               | ⭐️⭐️⭐️      |
-| [Payback Time](.challenges/payback_time.md)            | Inproper Input Validation           | ⭐️⭐️⭐️      |
-| [User Credentials](.challenges/user_credentials.md)    | SQL Injection                       | ⭐️⭐️⭐️⭐️    |
+| [Manipulate Basket](challenges/manipulate_basket.md)  | Broken Access Control               | ⭐️⭐️⭐️      |
+| [Payback Time](challenges/payback_time.md)            | Inproper Input Validation           | ⭐️⭐️⭐️      |
+| [User Credentials](challenges/user_credentials.md)    | SQL Injection                       | ⭐️⭐️⭐️⭐️    |
