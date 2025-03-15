@@ -19,4 +19,4 @@ To successfully complete this challenge, a product must be added to an existing 
 
 ## Approach
 
-# 1. 
+### 1. 
