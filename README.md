@@ -15,6 +15,8 @@ The OWASP Juice Shop is a vulnerable web application developed by Björn Kimmini
 
 Link to GitHub repository: https://github.com/juice-shop/juice-shop
 
+<br>
+
 ## Table-of-Contents
 
 | Challenge                                             | Category                            | Difficulty   |
