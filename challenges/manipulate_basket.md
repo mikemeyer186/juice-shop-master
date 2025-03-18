@@ -24,18 +24,18 @@ To successfully complete this challenge, a product must be added to an existing 
 
 ### 1. Identify which requests are responsible for modifying the shopping cart
 
-While adding a new item to your own basket, you can intercept the HTTP trafic to see which requests are called (must be logged in with your own user).
+While adding a new item to your own basket, you can intercept the HTTP traffic to see which requests are called (you must be logged in with your own user).
 
 ```
 GET /rest/basket/<number of basket>       # returns the content of every basket
-POST /api/BasketItems/                    # adds an item to the basket with specif payload
+POST /api/BasketItems/                    # adds an item to the basket with a specific payload
 
 Payload of POST request:
 
 {
     "ProductId":<id of product>,          # id of product from product catalog
     "BasketId":<number of basket>,        # number of basket of specific user (serves as access control)
-    "quantity":<quantity of product>      # quantitiy can also be negative, but not greater than 5
+    "quantity":<quantity of product>      # quantitiy can also be negative
 }
 ```
 
@@ -46,7 +46,7 @@ Payload of POST request:
 You have to manipulate the POST request to add a new `ProductId` to someone elses basket. The `BasketId` serves as the access control. Trying to change the number of `BasketId` will end in an error message from the server ("Invalid BasketId"). But adding an additional parameter in the payload with the `BasketId` of someone else, will lead to succes.
 
 ```
-POST /api/BasketItems/                    # adds an item to the basket with specif payload
+POST /api/BasketItems/                    # adds an item to the basket with specific payload
 
 Payload of POST request:
 
@@ -73,8 +73,8 @@ Submitting multiple HTTP parameters with the same name can cause an application 
 
 ### Conseqences
 
-As a consequence, an attacker could manipulate other users’ shopping carts, potentially causing significant damage to the shop. The primary risks include financial loss (e.g. incorrect orders, complaints or loss of customers) and reputational damage resulting from a loss of customer trust.
+As a consequence, an attacker could manipulate other users’ shopping carts, potentially causing significant damage to the shop. The primary risks include financial damage (e.g. incorrect orders, complaints or loss of customers) and reputational damage resulting from a loss of customer trust.
 
 ### How to avoid HTTP Paramter Pollution Attacks?
 
-Developers should be aware of how their backend handles multiple parameters with the same name in the payload. It must be ensured that access control cannot be bypassed. One possible solution is to have the server reject any HTTP request containing multiple parameters with the same name by returning an error message.
+Developers should be aware of how their backend handles multiple parameters with the same name in the payload of a POST request. It must be ensured that the access control cannot be bypassed. One possible solution is to have the server reject any HTTP request containing multiple parameters with the same name by returning an error message.
