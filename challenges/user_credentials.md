@@ -32,7 +32,7 @@ GET /rest/products/search?q=<search string>      # returns a JSON object with th
 
 ### 2. Manipulate the GET request and its parameter
 
-You have to manipulate the GET request with a UNION SELECT query to get the user credentials from the 'Users' table from the database. It is necessary that you know the database type and schema to query the correct table and fields. A good way is to solve the challenge “Exfiltrate the entire Database schema definition via SQL Injection” before.
+You have to manipulate the GET request with a UNION SELECT query to get the user credentials from the `Users` table from the database. It is necessary that you know the database type and schema to query the correct table and fields. A good way is to solve the challenge “Exfiltrate the entire Database schema definition via SQL Injection” before.
 
 ```
 # returns the sqlite schema
