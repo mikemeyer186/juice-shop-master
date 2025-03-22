@@ -33,7 +33,7 @@ Payload of POST request:
 {
     "ProductId":<id of product>,          # id of product from product catalog
     "BasketId":<number of basket>,        # number of basket of specific user (serves as access control)
-    "quantity":<quantity of product>      # quantitiy can also be negative, but not greater than 5
+    "quantity":<quantity of product>      # quantitiy can also be negative
 }
 ```
 
@@ -64,6 +64,7 @@ After adding a `ProductId` with a high negativ number (e.g. -1000) to you basket
 After the checkout of the cart, you can see that the negative total price of the order is now as a positve amount in the wallet. It seems that just a simple mathematical formula is responsible for that behavior.
 
 ```
+# example
 Wallet Balance - Total Sum of Order + Bonus Points = 0.00$ - (-22,568$) + (-1994$) = 20,574$
 ```
 
