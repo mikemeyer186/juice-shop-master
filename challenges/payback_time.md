@@ -86,3 +86,9 @@ In a real-world scenario, this vulnerability could cause massive financial damag
 ### How to avoid inproper validations?
 
 This vulnerability can be prevented by properly validating the shopping cart data. It must not be possible to add negative quantities of products to the cart. While this is already enforced in the frontend, server-side validation of the payload is also necessary. Any manipulated POST requests should be rejected by the server with an appropriate error message. Additionally, the checkout process validation should be improved. Completing an order with a negative total amount should either be entirely prevented or be subjected to manual review by a shop employee.
+
+<br>
+
+## Video Documentation (in German language)
+
+[![](/challenges/assets/payback_time.png)](https://www.loom.com/share/608f151ff0df4cbf9a772da52fc7fec9)

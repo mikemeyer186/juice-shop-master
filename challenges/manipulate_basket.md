@@ -78,3 +78,9 @@ As a consequence, an attacker could manipulate other users’ shopping carts, po
 ### How to avoid HTTP Paramter Pollution Attacks?
 
 Developers should be aware of how their backend handles multiple parameters with the same name in the payload of a POST request. It must be ensured that the access control cannot be bypassed. One possible solution is to have the server reject any HTTP request containing multiple parameters with the same name by returning an error message.
+
+<br>
+
+## Video Documentation (in German language)
+
+[![](/challenges/assets/manipulate_basket.png)](https://www.loom.com/share/7f53e698d62f4056a02408a1b8997080)
